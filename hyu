@@ -1,0 +1,54 @@
+#include <stdio.h>#윤년
+
+int main(){
+    int a;
+    scanf("%d",&a);
+    if(a %4==0  && a %100!=0 || a%400==0){
+        printf("1");
+    }
+    else{
+        printf("0");
+    }
+}
+#include <stdio.h> #제 4분면
+    int main(){
+    int a, b;
+    scanf("%d %d",&a,&b);
+    if(a > 0 && b > 0)
+    printf("1");
+    if(a > 0 && b < 0)
+    printf("4");
+    }
+ #include<stdio.h> #오븐
+
+int main(){ // 알람 시계
+	int a,b,c;
+	scanf("%d %d %d", &a,&b,&c);
+
+	b =b+c;
+
+	if(b>=60){
+		a=a+(b/60);
+		b=b%60;
+	}
+	if(a>=24){
+		a=a%24;
+	}
+	printf("%d %d", a,b);
+}   
+#include <stdio.h> //주사위
+
+int main() {
+
+    int A, B, C;
+    scanf("%d %d %d", &A, &B, &C);
+
+    if (A == B && B == C) printf("%d", 10000 + A * 1000);
+    else if (A == B || B == C) printf("%d", 1000 + B * 100);
+    else if (C == A) printf("%d", 1000 + C * 100);
+    else {
+        if (A > B && A > C) printf("%d", A * 100);
+        else if (B > A && B > C) printf("%d", B * 100);
+        else printf("%d", C * 100);
+    }
+}
